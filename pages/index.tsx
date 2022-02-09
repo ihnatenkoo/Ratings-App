@@ -1,6 +1,4 @@
-import { Htag } from '../components';
-import { Button } from '../components';
-import { Paragraph } from '../components';
+import { Htag, Button, Paragraph, Tag } from '../components';
 
 export default function Home(): JSX.Element {
   return (
@@ -18,6 +16,22 @@ export default function Home(): JSX.Element {
         менеджерами, разработчиками и маркетологами. Выпускники факультета могут успешно
         конкурировать с веб-дизайнерами уровня middle.
       </Paragraph>
+      <Tag size="m" color="gray">
+        10
+      </Tag>
+      <Tag size="s" color="green">
+        -10 000 ₽
+      </Tag>
+      <Tag size="m" color="red">
+        hh.ru
+      </Tag>
+      <Tag size="s" color="primary">
+        Графический дизайн
+      </Tag>
+      <Tag>Photoshop</Tag>
+      <Tag size="s" color="green" href="mylink">
+        This is Link!
+      </Tag>
     </>
   );
 }
