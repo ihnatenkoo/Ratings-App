@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { Htag, Button, Paragraph, Tag, Rating } from '../components';
-import { Layout } from '../layout/Layout';
+import { withLayout } from '../layout/Layout';
 
-export default function Home(): JSX.Element {
+const Home = (): JSX.Element => {
   const [rating, setRating] = useState<number>(4);
 
   return (
-    <Layout>
+    <>
       <Htag tag="h1">First Page</Htag>
       <Button appereance="primary" arrow="right">
         Узнать побробнее
       </Button>
       <Button appereance="ghost" arrow="right">
-        Узнать побробнее
+        Узнать подробнее
       </Button>
       <Paragraph>
         Студенты освоят не только hard skills, необходимые для работы веб-дизайнером, но и
@@ -37,6 +37,8 @@ export default function Home(): JSX.Element {
         This is Link!
       </Tag>
       <Rating isEditable rating={rating} setRating={setRating}></Rating>
-    </Layout>
+    </>
   );
-}
+};
+
+export default withLayout(Home);
